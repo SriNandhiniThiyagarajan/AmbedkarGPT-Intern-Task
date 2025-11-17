@@ -18,13 +18,15 @@ The system loads a short speech by **Dr. B.R. Ambedkar**, converts it into embed
 
 ```
 project/
-│── assignment/                 # Contains assignment PDF or resources
-│── chroma_db/                  # Auto-generated vector store (Chroma)
-│── text_files/
-│     └── speech.txt            # Input dataset (Ambedkar speech)
-│── rag_ass.ipynb               # Main notebook with full implementation
+│── assignment/                 
+│     │── chroma_db/            # Auto-generated vector store (Chroma)
+│     │── text_files/           
+│     │     └── speech.txt      # Input dataset (Ambedkar speech)
+│     │── rag_ass.ipynb         # Main notebook with full implementation
+│
 │── requirements.txt            # All dependencies
 │── README.md                   # Documentation (this file)
+
 ```
 
 ---
@@ -117,7 +119,7 @@ jupyter notebook rag_ass.ipynb
    Loads the text file using `TextLoader`.
 
 2. **Text Splitting**  
-   Splits the speech into chunks using `CharacterTextSplitter`.
+   Splits the speech into chunks using `RecursiveCharacterTextSplitter`.
 
 3. **Embedding Creation**  
    Generates embeddings using  
